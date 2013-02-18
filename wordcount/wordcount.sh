@@ -3,7 +3,7 @@ export s1=$(whoami)
 s2="root"
 if [ "x$s1" == "x$s2" ]
 	then
-	   OS=`cat /etc/redhat-release | awk {'print $1}'`
+	   OS=`cat /etc/*-release | awk {'print $1}'`
 		if [ "$OS" = "CentOS" -o "$OS"!="Red" ]
 		then
 		     yum install dialog
